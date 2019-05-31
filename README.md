@@ -24,6 +24,9 @@ If you're using linux natively, you don't have to do this. However, currently th
 `vagrant ssh -c` to execute "remote" commands inside the vm. It doesn't yet have the conditional logic
 to not do that when running on native linux boxes.
 
+You'll need to edit the piece of the Vagrant file that sets the config.vm.synced_folder. These are
+user specific.
+
 You'll also need [docker](https://docs.docker.com/docker-for-mac/install/), both on your host machine as 
 well as inside the vm. I haven't automated the installation of docker inside the vm yet. The /pbi drives
 are mounted into the containers, so that Pacbio data is accessible. Since these are NFS volumes, you must
