@@ -5,8 +5,8 @@ inside a container. This is useful, because the runtime environment can be contr
 isolated from the environment in which the tool is run.
 
 Docker is used for local development, local testing, and local execution. For production deployment,
-the docker image is compiled into a singularity image file. Singularity is installed on all of our
-HPC nodes. Singularity images can be run as executables.
+the docker image is compiled into a singularity image file. Singularity is often installed on HPC nodes.
+Singularity images can be run as executables.
 
 ## Installation
 
