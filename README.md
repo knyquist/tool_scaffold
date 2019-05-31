@@ -5,8 +5,8 @@ inside a container. This is useful, because the runtime environment can be contr
 isolated from the environment in which the tool is run.
 
 Docker is used for local development, local testing, and local execution. For production deployment,
-the docker image is compiled into a singularity image file. Singularity is installed on all of our
-HPC nodes. Singularity images can be run as executables.
+the docker image is compiled into a singularity image file. Singularity is often installed on HPC nodes.
+Singularity images can be run as executables.
 
 ## Installation
 
@@ -23,6 +23,9 @@ brew cask install vagrant-manager
 If you're using linux natively, you don't have to do this. However, currently the Makefile uses
 `vagrant ssh -c` to execute "remote" commands inside the vm. It doesn't yet have the conditional logic
 to not do that when running on native linux boxes.
+
+You'll need to edit the piece of the Vagrant file that sets the config.vm.synced_folder. These are
+user specific.
 
 You'll also need [docker](https://docs.docker.com/docker-for-mac/install/), both on your host machine as 
 well as inside the vm. I haven't automated the installation of docker inside the vm yet. The /pbi drives
